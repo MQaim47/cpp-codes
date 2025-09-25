@@ -1,38 +1,52 @@
- Vehicle Management System in C++
+🚗 Vehicle Management System (C++ OOP)
+
 This project demonstrates a C++ object-oriented design for managing different types of vehicles using inheritance, polymorphism, virtual functions, and dynamic memory management.
 
- Classes Implemented
-Vehicle (Base Class)
-Contains common vehicle attributes such as ID and mileage. Provides a virtual method to display details.
+📦 Classes Implemented
+🚘 Vehicle (Base Class)
 
-FuelBasedVehicle (Abstract Class)
-Inherits from Vehicle and serves as a base class for fuel-dependent vehicles like Truck and Car.
+Stores common attributes like vehicleID and mileage.
 
-Truck
-Inherits from FuelBasedVehicle. Includes a loadCapacity attribute and overrides displayDetails() with validation.
+Provides a virtual method displayDetails() for polymorphic behavior.
 
-Car
-Inherits from FuelBasedVehicle. Adds passengerCapacity and custom validation.
+⛽ FuelBasedVehicle (Abstract Class)
 
-ElectricCar
-Inherits from Car. Adds batteryCapacity and overrides displayDetails() for full reporting.
+Inherits from Vehicle.
 
-Features
-Polymorphism using base class pointers (Vehicle*)
+Serves as a base for fuel-dependent vehicles like Truck and Car.
 
-Dynamic Memory Allocation and cleanup using delete
+🚛 Truck
 
-Vehicle Search Functionality based on vehicleID
+Inherits from FuelBasedVehicle.
 
-Input Validation for negative values and empty strings
+Adds loadCapacity with validation.
 
-Extensible Design for future vehicle types
+Overrides displayDetails().
 
- Example Usage
-In main():
+🚙 Car
 
-A Truck, Car, and ElectricCar are created dynamically.
+Inherits from FuelBasedVehicle.
 
-Their information is printed using polymorphic calls to displayDetails().
+Adds passengerCapacity with validation.
 
-Vehicles are cleaned up using delete to prevent memory leaks.
+Customizes displayDetails().
+
+🔋 ElectricCar
+
+Inherits from Car.
+
+Adds batteryCapacity.
+
+Overrides displayDetails() for complete reporting.
+
+✨ Features
+
+Polymorphism via base class pointers (Vehicle*).
+
+Dynamic Memory Allocation (new / delete).
+
+Vehicle Search by vehicleID.
+
+Input Validation (no negative values, no empty strings).
+
+Extensible Design → easy to add more vehicle types.

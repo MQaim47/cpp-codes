@@ -1,54 +1,59 @@
-This C++ program implements a simple Student and Course Management System using Object-Oriented Programming (OOP) concepts. It demonstrates class design, dynamic memory handling, copy constructors, destructors, operator overloading, and static data members.
+🎓 Student and Course Management System (C++ OOP)
+
+This project implements a simple Student and Course Management System using Object-Oriented Programming (OOP) concepts in C++.
+It demonstrates class design, memory management, operator overloading, static members, and deep copy implementation.
 
 ✨ Features
-Student Class:
+🧑‍🎓 Student Class
 
-Dynamically stores name, ID, and 3 enrolled courses
+Stores name, ID, and 3 enrolled courses dynamically.
 
-Supports deep copying through a custom copy constructor
+Supports deep copy using a custom copy constructor.
 
-Tracks the total number of students using a static variable
-
-Overloaded operators:
-
->> and << for input/output
-
-== for comparing student IDs
-
-Course Class:
-
-Stores course name and credit hours
-
-Tracks total courses using a static variable
+Tracks the total number of students via a static variable.
 
 Overloaded operators:
 
->> and << for input/output
+>> and << → Input/output
 
-+ for summing credit hours
+== → Compare student IDs
 
-Memory Management:
+📘 Course Class
 
-Proper allocation and deallocation using new and delete
+Stores course name and credit hours.
 
-Custom destructor for safe cleanup
+Tracks the total number of courses.
 
-Interactive Console Input:
+Overloaded operators:
 
-Accepts user input for students and courses
+>> and << → Input/output
 
-Displays details using the overloaded << operator
++ → Sum credit hours
+
+⚙️ Memory Management
+
+Uses new and delete for safe dynamic allocation.
+
+Custom destructor ensures proper cleanup.
+
+💻 Interactive Console Input
+
+Accepts user input for students and courses.
+
+Displays details using overloaded <<.
 
 🧪 Sample Operations
-Create and display students and courses
 
-Copy student objects and verify deep copy
+Create and display students and courses.
 
-Add credit hours of two courses
+Copy student objects (verify deep copy vs shallow copy).
 
-Track total number of students and courses created
+Add credit hours of two courses (course1 + course2).
+
+Track total number of students and courses created.
 
 📌 Concepts Demonstrated
+
 Classes and objects
 
 Dynamic memory allocation
@@ -62,8 +67,9 @@ Operator overloading
 Friend functions
 
 🛠️ Technologies
+
 Language: C++
 
 Standard: C++11 or later
 
-Tools: g++, Visual Studio, or any standard C++ compiler
+Compiler: g++, Visual Studio, or any standard C++ compiler

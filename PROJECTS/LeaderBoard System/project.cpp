@@ -87,7 +87,7 @@ class Node{
 					return rightRotation(root); 
 				}
 				//RL
-				if (balance <- 1 && key < root->left->data){
+				if (balance <- 1 && key < root->right->data){
 					root->right = rightRotation(root->right);
 					return leftRotation(root);
 				}
@@ -120,15 +120,15 @@ class Node{
 			if (root == NULL){ return -1; }
 			while (root->left != NULL){
 				root = root->left;
-				return root->data;
 			}
+			return root->data;
 		}
 			int getMax(Node*root){
 				if (root == NULL){ return -1; }
 				while (root->right != NULL){
 					root = root->right;
-					return root->data;
 				}
+				return root->data;
 			}
 		
 			int sumScores(Node* root){
@@ -159,9 +159,9 @@ class Node{
 			int countSmaller(Node* root, int x){
 				if (root == NULL){ return 0; }
 				if (root->data >= x){
-					return countGreater(root->left, x);
+					return countSmaller(root->left, x);
 				}
-				return 1 + countGreater(root->left, x) + countGreater(root->right, x);
+				return 1 + countSmaller(root->left, x) + countSmaller(root->right, x);
 			}
 			void printLeaf(Node* root){ 
 				if (root == NULL){ return ; }
@@ -291,7 +291,7 @@ public:
 		}
 	};
 	int main(){
-		cout << "					WELCOME TO LEADERBOARD            " << endl;
+		cout << "\t\tWELCOME TO LEADERBOARD\t\t" << endl;
 		AVL leaderboard;
 
 		cout << "Enter scores (-1 to end): ";
